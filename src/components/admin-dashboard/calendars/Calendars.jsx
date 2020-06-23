@@ -12,8 +12,6 @@ const localizer = momentLocalizer(moment); // or globalizeLocalizer
 
 const calendarsList = ["Calendar 1", "Calendar 2", "Calendar 3"];
 
-console.log(new Date(Date.now()));
-
 const Calendars = () => {
   const [newEvent, setNewEvent] = useState({
     start: new Date(Date.now()),
@@ -30,13 +28,28 @@ const Calendars = () => {
   const [myEventsList, setMyEventsList] = useState([
     {
       id: 1,
-      title: "Some Event",
+      title: "Meeting",
       start: "Thu Jun 11 2020",
-      end: "Thu Jun 13 2020 12:12",
+      end: "Thu Jun 11 2020",
+    },
+    {
+      id: 2,
+      title: "Football game",
+      start: "Thu Jun 3 2020",
+      end: "Thu Jun 3 2020",
+    },
+    {
+      id: 3,
+      title: "Football game",
+      start: "Thu Jun 15 2020",
+      end: "Thu Jun 15 2020",
     },
   ]);
   return (
-    <div className="row no-gutters position-relative" ref={container}>
+    <div
+      className="row no-gutters position-relative px-2 px-sm-3 px-md-4"
+      ref={container}
+    >
       <div
         className="position-absolute"
         style={{
